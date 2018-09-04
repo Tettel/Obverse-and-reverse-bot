@@ -24,7 +24,9 @@ def my_handler(client, message):
          res = '<b>Выпал: орел</b>'
      else: #Если другое число - орел
          res = '<b>Выпала: решка</b>'
-     app.send_message(chat_id=ch_id, text=f'<b>Выпал:</b>' + res, 
-                      reply_to_message_id=ms_id, parse_mode='HTML')
+     app.send_message(ch_id,
+                      res, 
+                      reply_to_message_id=ms_id, 
+                      parse_mode='HTML')
 
 app.idle()
